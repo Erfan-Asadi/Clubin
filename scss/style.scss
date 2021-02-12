@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
 @import 'base';
 
 body {
@@ -17,6 +17,9 @@ body {
 
     .clubin-header__logo {
         width: 180px;
+    }
+    input {
+        @include btn-style;
     }
 
     .clubin-header__nav {
@@ -154,6 +157,7 @@ body {
 
 }
 
+
 svg {
     position: absolute;
     top: -95px;
@@ -171,10 +175,6 @@ svg {
     }
 }
 
-input {
-    @include btn-style;
-}
-
 .banner {
     border-radius: 7px;
     box-shadow: 0 0 40px #000000;
@@ -186,6 +186,7 @@ input {
     margin-bottom: 10px;
     font-family: Poppins, sans-serif;
     cursor: pointer;
+    overflow: hidden;
 
     .fa-icon {
         color: #BD11FA;
@@ -231,11 +232,10 @@ input {
         left: 0;
         display: grid;
         grid-template: repeat(auto-content) / repeat(4, 1fr) ;
-        grid-template-areas: "h h . i"
+        grid-template-areas: "h h h i"
                             "p p p p"
-                            ". . . f";
-        border-bottom-left-radius: 7px;
-        border-bottom-right-radius: 7px;
+                            "f f f f";
+        
         background-color: rgba(#162640, .59);
         padding: .2rem 1rem .6rem 1.6rem;
         color: #fff;
@@ -286,6 +286,7 @@ input {
         .icon-footer {
             color: $clubin-blue;
             grid-area: f;
+            justify-self: end;
             .fa-icon {
                 font-weight: 900;
             }
@@ -293,3 +294,70 @@ input {
 
     }
 }
+
+.calendar {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    max-height: 550px;
+    background-color: transparent;
+
+    &__item{
+        $vertical_padding : 6px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 16px;
+        color: #ffffff;
+        font-family: 'Poppins',sans-serif;
+        background-color: #20202c;
+        box-shadow: 0 0 40px #000000;
+        overflow: hidden;
+        border-radius: 6px;
+        padding: 6px 0 6px 12px;
+
+        .item__date {
+            margin-left: -18px;
+            display: flex;
+            flex-flow: column nowrap;
+            font-size: 1em;
+            color: $clubin-blue;
+            &__mounth {
+                font-size: .8125em;
+            }
+            &__weekday {
+                font-size: .75em;
+                margin-top: -3px;
+            }
+        }
+        .item__number {
+            font-size: 2.37em;
+            color: #BD11FA;
+        }
+        .item__title,
+        .item__btn {
+            font-size: .9375em;
+            color: #ffffff;
+            margin-bottom: 0;
+            font-weight: 400;
+        }
+        .item__btn {
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            height: calc(100% + #{$vertical_padding *2});
+            background-color: #BD11FA;
+            padding: 0 16px;
+
+            &:focus {
+                outline: none;
+            }
+        }
+        .item__time {
+            font-size: .75em;
+            color: $clubin-blue;
+        }
+    }
+}
+
