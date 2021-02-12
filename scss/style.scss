@@ -298,12 +298,14 @@ svg {
 .calendar {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-between;
     max-height: 550px;
     background-color: transparent;
 
     &__item{
-        $vertical_padding : 6px;
+        & + & {
+            margin-top: 19px;
+        }
+        $vertical_padding : 4px;
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -315,13 +317,17 @@ svg {
         box-shadow: 0 0 40px #000000;
         overflow: hidden;
         border-radius: 6px;
-        padding: 6px 0 6px 12px;
+        padding:4px 0 4px 12px;
+        cursor: pointer;
+        height: 60px;
 
         .item__date {
-            margin-left: -18px;
             display: flex;
-            flex-flow: column nowrap;
+            flex-flow: column wrap;
+            justify-content: center;
+            height: 100%;
             font-size: 1em;
+            min-width: 135px;
             color: $clubin-blue;
             &__mounth {
                 font-size: .8125em;
@@ -330,10 +336,12 @@ svg {
                 font-size: .75em;
                 margin-top: -3px;
             }
-        }
-        .item__number {
-            font-size: 2.37em;
-            color: #BD11FA;
+            &__number {
+                // margin-right: 18px;
+                font-size: 2.37em;
+                margin-right: 8px;
+                color: #BD11FA;
+            }
         }
         .item__title,
         .item__btn {
@@ -341,6 +349,8 @@ svg {
             color: #ffffff;
             margin-bottom: 0;
             font-weight: 400;
+            text-align: center;
+            line-height: 1.33;
         }
         .item__btn {
             border-radius: 6px;
@@ -357,6 +367,31 @@ svg {
         .item__time {
             font-size: .75em;
             color: $clubin-blue;
+        }
+    }
+
+    &__find-input {
+        border: none;
+        background-color: rgba($clubin-blue, .1);
+        color: $clubin-blue;
+        width: 155px;
+        margin-bottom: 40px;
+        padding: 10px 15px;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__arrows {
+        margin-top: 19px;
+        align-self: flex-end;
+        .arrow {
+            width: 64px;
+            cursor: pointer;
+            &:last-child {
+                margin-left: 4px;
+            }
         }
     }
 }
