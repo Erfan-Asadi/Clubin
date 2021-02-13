@@ -8,11 +8,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
 </head>
 <body>
-    <svg width="800">
-        <circle class="inner-circle" cx="300" cy="300" r="260" stroke="red"  fill="none" />
-        <circle class="outer-circle" cx="300" cy="300" r="370" stroke="red"  fill="none" />
+    <svg class="landing-svg background-svg">
+        <circle class="inner-circle" cx="300" cy="300" r="300" stroke="red"  fill="none" />
+        <circle class="middle-circle" cx="300" cy="300" r="440" stroke="red"  fill="none" />
+        <circle class="outer-circle" cx="300" cy="300" r="580" stroke="red"  fill="none" />
     </svg>
     <div class="container">
+        
         <div class="row">
             <div class="col-12">
                 <header class="clubin-header">
@@ -38,7 +40,12 @@
                             <img src="asset/landing-img.png" alt="landing-img">
                         </div>
                     </section>
-                    <div class="container">
+                    <div class="container events-container">
+                        <svg class="events-svg background-svg">
+                            <circle class="inner-circle" cx="580" cy="580" r="200" stroke="red"  fill="none" />
+                            <circle class="middle-circle" cx="580" cy="580" r="440" stroke="red"  fill="none" />
+                            <circle class="outer-circle" cx="580" cy="580" r="580" stroke="red"  fill="none" />
+                        </svg>
                         
                         <div class="events row d-flex flex-md-nowrap justify-content-between">
 
@@ -120,8 +127,12 @@
                                 
                                 
                                 <div class="calendar__arrows">
-                                    <img class="arrow" src="./asset/arrow-left.svg" alt="">
-                                    <img class="arrow" src="./asset/arrow-right.svg" alt="">
+                                    <button class="arrow">
+                                        <i class="fas fa-arrow-left"></i>
+                                    </button>
+                                    <button class="arrow">
+                                        <i class="fas fa-arrow-right"></i>
+                                    </button>
                                 </div>
                             </div>
                     </div>
