@@ -196,25 +196,23 @@
                 </div>
               </div>
             </div>
-            <div class="slider-wrap">
-
-              <div id="base">
-                <div class="bg-danger">one</div>
-                <div class="bg-info">Two</div>
-                <div class="bg-success">Three</div>
-                <div class="bg-info">Two</div>
-                <div class="bg-danger">one</div>
-                <div class="bg-dark">Three</div>
-              </div>
+            <div class="artist">
+              <h2 class="artist-title">ARTIST</h2>
+              <article id="artist-item-container">
+                <section class="artist-item">1</section>
+                <section class="artist-item">2</section>
+                <section class="artist-item">3</section>
+                
+              </article>
               <div class="controls-container">
                 <button></button>
                 <button></button>
                 <div class="indicator-container">
-                  <button></button>
-                  <button></button>
-                  <button></button>
-                  <button></button>
-                  <button></button>
+                 <button></button>
+                 <button></button>
+                 <button></button>
+                
+                  
                 </div>
               </div>
             </div>
@@ -235,15 +233,17 @@
       let navContainer = document.querySelector('.indicator-container');
       let controlsContainer = document.querySelector('.controls-container');
       var slider = tns({
-        container: "#base",
-        items: 3, 
-        lazyload: true,
+        container: "#artist-item-container",
+        items: 3,
         mouseDrag: true,
         swipeAngle: false,
+        autoWidth: false,
         speed: 300,
         nav: true,
         navPosition: 'bottom',
         loop: true,
+        center: true,
+        startIndex:1,
         controlsPosition: 'bootom',
         navContainer: navContainer,
         controlsContainer: controlsContainer

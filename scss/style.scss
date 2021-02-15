@@ -418,10 +418,32 @@ body {
         }
     }
 }
-.controls-container {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
+.artist {
+    
+    margin-top: 100px;
+    .artist-title {
+        font-size: 30px;
+        font-weight: bold;
+        color: $clubin-blue;
+        margin: 0 auto;
+        width: fit-content;
+
+    }
+    .controls-container {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .artist-item {
+        height: 200px;
+        margin: 35px 0;
+        background-color: #20202c;
+        border-radius: 6px;
+        box-shadow: 0 0 35px rgba($color: #000000, $alpha: .54);
+    }
+    .artist-item + .artist-item {
+        margin-left: 30px;
+    }
 }
 
