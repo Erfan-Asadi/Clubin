@@ -4,7 +4,7 @@
 body {
     background-color: $body-background !important;
     position: relative;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .clubin-header {
@@ -19,6 +19,7 @@ body {
     .clubin-header__logo {
         width: 180px;
     }
+
     input {
         @include btn-style;
     }
@@ -177,11 +178,13 @@ body {
         stroke: $clubin-blue;
         opacity: .52;
     }
+
     .outer-circle {
         stroke: $clubin-blue;
         opacity: .1;
     }
 }
+
 .events-svg {
     top: 492px;
     left: -945px;
@@ -225,14 +228,16 @@ body {
                 ". t t ."
                 ". b b ."
                 ". . . .";
-            
+
             .banner__cover__detail {
                 display: none;
             }
+
             .event-time {
                 display: inline;
                 grid-area: t;
             }
+
             .book-event-btn {
                 display: block;
                 grid-area: b;
@@ -247,11 +252,11 @@ body {
         right: 0;
         left: 0;
         display: grid;
-        grid-template: repeat(auto-content) / repeat(4, 1fr) ;
+        grid-template: repeat(auto-content) / repeat(4, 1fr);
         grid-template-areas: "h h h i"
-                            "p p p p"
-                            "f f f f";
-        
+            "p p p p"
+            "f f f f";
+
         background-color: rgba(#162640, .59);
         padding: .2rem 1rem .6rem 1.6rem;
         color: #fff;
@@ -261,14 +266,17 @@ body {
             font-size: 2em;
             font-weight: 700;
         }
+
         .event-time,
         .book-event-btn {
             display: none;
         }
+
         .event-time {
             font-size: 1.5em;
             color: $clubin-blue;
         }
+
         .book-event-btn {
             padding: 25px 15px;
             border-radius: 6px;
@@ -277,8 +285,9 @@ body {
             color: #BD11FA;
             font-size: 1em;
             font-weight: 300;
-            
+
         }
+
         .icon-header {
             color: $clubin-blue;
             grid-area: i;
@@ -287,8 +296,8 @@ body {
         }
 
         .icon-header,
-        .fa-icon ,
-        .icon-footer{
+        .fa-icon,
+        .icon-footer {
             font-weight: 400;
         }
 
@@ -303,6 +312,7 @@ body {
             color: $clubin-blue;
             grid-area: f;
             justify-self: end;
+
             .fa-icon {
                 font-weight: 900;
             }
@@ -317,10 +327,11 @@ body {
     max-height: 550px;
     background-color: transparent;
 
-    &__item{
-        & + & {
+    &__item {
+        &+& {
             margin-top: 19px;
         }
+
         $vertical_padding : 4px;
         width: 100%;
         display: flex;
@@ -328,7 +339,8 @@ body {
         align-items: center;
         font-size: 16px;
         color: #ffffff;
-        font-family: 'Poppins',sans-serif;
+        font-family: 'Poppins',
+        sans-serif;
         background-color: #20202c;
         box-shadow: 0 0 40px #000000;
         overflow: hidden;
@@ -345,13 +357,16 @@ body {
             font-size: 1em;
             min-width: 135px;
             color: $clubin-blue;
+
             &__mounth {
                 font-size: .8125em;
             }
+
             &__weekday {
                 font-size: .75em;
                 margin-top: -3px;
             }
+
             &__number {
                 // margin-right: 18px;
                 font-size: 2.37em;
@@ -359,6 +374,7 @@ body {
                 color: #BD11FA;
             }
         }
+
         .item__title,
         .item__btn {
             font-size: .9375em;
@@ -368,6 +384,7 @@ body {
             text-align: center;
             line-height: 1.33;
         }
+
         .item__btn {
             border-radius: 6px;
             border: none;
@@ -380,6 +397,7 @@ body {
                 outline: none;
             }
         }
+
         .item__time {
             font-size: .75em;
             color: $clubin-blue;
@@ -402,26 +420,27 @@ body {
     &__arrows {
         margin-top: 25px;
         align-self: flex-end;
+
         .arrow {
-            padding: 11px 20px;
-            cursor: pointer;
-            background-color: transparent;
-            border: 1px solid $clubin-blue;
-            color: $clubin-blue;
-            border-radius: 6px;
-            font-size: 1.2em;
+           @include arrow-btn;
+
             &:last-child {
                 margin-left: 4px;
             }
+
             &:focus {
                 outline: none;
             }
         }
     }
 }
+
 .artist {
-    font-family: 'Poppins',sans-serif;
+
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
     margin-top: 100px;
+
     .artist-title {
         font-size: 30px;
         font-weight: bold;
@@ -430,23 +449,54 @@ body {
         width: fit-content;
 
     }
+
     .controls-container {
         display: flex;
         width: 100%;
         justify-content: center;
         align-items: center;
+        
+        &:focus {
+            outline: none;
+        }
+        .arrow {
+            margin: 0 23px;
+            @include arrow-btn;
+        }
+        button[data-controls="next"] {
+            order: 1;
+        }
+        .indicator-container {
+            margin-bottom: 6px;
+            button {
+            border-radius: 50%;
+            border: none;
+            background-color: rgba($clubin-blue, .2);
+            padding: 5px;
+            margin: 0 5px;
+            &:focus {
+                outline: none;
+            }
+        }
+        .tns-nav-active{
+            background-color: rgba($clubin-blue, 1);
+            transform: scale(1.4);
+            }
+        } 
     }
+
     .artist-item {
-        width: 343px  !important;
+        // width sets in script tiny-slider to 325px
         height: fit-content;
         padding-bottom: 18px;
-        margin: 35px 0;
+        margin: 38px 0 38px 38px;
         display: flex;
         color: #ffffff;
         flex-flow: column nowrap;
         background-color: #20202c;
         border-radius: 6px;
         font-size: 1em;
+        cursor: pointer;
         box-shadow: 0 0 35px rgba($color: #000000, $alpha: .54);
 
         .header {
@@ -455,7 +505,7 @@ body {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding:14px 24px;
+            padding: 14px 24px;
             font-size: .9em;
 
             .fa-icon {
@@ -464,14 +514,17 @@ body {
                 margin: 0 4px;
                 vertical-align: text-bottom;
             }
+
             &__degree {
                 font-weight: 300;
             }
         }
+
         .img-container {
             width: 100%;
             height: 100px;
             overflow: hidden;
+
             img {
 
                 width: 100%;
@@ -479,13 +532,16 @@ body {
                 object-fit: cover;
             }
         }
+
         .artist-info {
             width: 100%;
             padding-left: 30px;
+
             &__name {
                 position: relative;
                 font-size: 1.1em;
-                margin: 24px 0 28px ;
+                margin: 24px 0 28px;
+
                 &::after {
                     position: absolute;
                     left: 0;
@@ -496,15 +552,14 @@ body {
                     background-color: #BD11FA;
                 }
             }
+
             &__biography {
                 font-size: .9em;
                 font-weight: 200;
                 width: 95%;
+                user-select: none;
             }
-        } 
+        }
     }
-    .artist-item + .artist-item {
-        margin-left: 30px;
-    }
-}
 
+}
