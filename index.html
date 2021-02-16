@@ -199,8 +199,35 @@
             <div class="artist">
               <h2 class="artist-title">ARTIST</h2>
               <article id="artist-item-container">
-                <section class="artist-item">1</section>
-                <section class="artist-item">2</section>
+                <section class="artist-item">
+                  <header class="header">
+                    <span class="header__location">
+                      <i class="fas fa-map-marker-alt fa-icon"></i>
+                      New York, NY
+                    </span>
+                    <span class="header__degree">
+                      Musician
+                    </span>
+                  </header>
+                  <div class="img-container">
+                    <img src="asset/item-img2.png" alt="item-img1">
+                  </div>
+                </section>
+                <section class="artist-item">
+                  <header class="header">
+                    <span class="header__location">
+                      <i class="fas fa-map-marker-alt fa-icon"></i>
+                      New York, NY
+                    </span>
+                    <span class="header__degree">
+                      Musician
+                    </span>
+                  </header>
+                  <div class="img-container">
+                    <img src="asset/item-img1.png" alt="item-img1">
+                  </div>
+                </section>
+               
                 <section class="artist-item">3</section>
                 
               </article>
@@ -237,7 +264,7 @@
         items: 3,
         mouseDrag: true,
         swipeAngle: false,
-        autoWidth: false,
+        fixedWidth: 320,
         speed: 300,
         nav: true,
         navPosition: 'bottom',
