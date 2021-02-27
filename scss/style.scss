@@ -199,8 +199,8 @@ main {
     overflow: hidden;
 }
 .artist-svg {
-    left: 30%;
-    top: 930px;
+    left: 32%;
+    top: 935px;
 }
 
 .banner {
@@ -547,19 +547,7 @@ main {
             padding-left: 30px;
 
             &__name {
-                position: relative;
-                font-size: 1.1em;
-                margin: 24px 0 28px;
-
-                &::after {
-                    position: absolute;
-                    left: 0;
-                    bottom: -12px;
-                    content: '';
-                    width: 185px;
-                    height: 1px;
-                    background-color: #BD11FA;
-                }
+               @include title_with_underline_style;
             }
 
             &__biography {
@@ -583,9 +571,9 @@ main {
     background-position: 0%;
     font-family: 'Poppins',sans-serif;
     font-size: 16px;
-
+    padding: 0 90px;
     &__content {
-        width: 90%;
+        width: 100%;
         margin: 34px 0;
         display: flex;
         justify-content: space-between;
@@ -624,5 +612,29 @@ main {
                 margin-left: -14px;
             }
         }
+    }
+}
+.about {
+    width: 100%;
+    padding: 50px 90px;
+    font-size: 16px;
+    font-family: 'Poppins',sans-serif;
+    background-image: linear-gradient(to right,$clubin-blue 0%,#bd11fa 100%);
+
+    &__texts{
+        width: 70%;
+        color: #283c5c;
+
+        &__title {
+            @include title_with_underline_style(#21212e,275px); // line color and width
+            font-size: 2em;
+            font-weight: 600;
+            position: relative;
+        }
+        &__paragraph {
+            font-size: 1em;
+            font-weight: 300;
+        }
+        
     }
 }

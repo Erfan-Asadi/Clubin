@@ -27,3 +27,19 @@
      border-radius: 6px;
      font-size: 1.2em;
  }
+
+ @mixin title_with_underline_style($bg-color:#BD11FA,$width:185px) {
+    position: relative;
+    font-size: 1.1em;
+    margin: 24px 0 28px;
+
+    &::after {
+        position: absolute;
+        left: 0;
+        bottom: -12px;
+        content: '';
+        width: $width;
+        height: 1px;
+        background-color:$bg-color;
+    }
+ }
