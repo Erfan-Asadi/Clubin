@@ -194,10 +194,12 @@ body {
 .events-container {
     margin-top: 40px;
 }
+
 main {
     position: relative;
     overflow: hidden;
 }
+
 .artist-svg {
     left: 32%;
     top: 935px;
@@ -431,7 +433,7 @@ main {
         align-self: flex-end;
 
         .arrow {
-           @include arrow-btn;
+            @include arrow-btn;
 
             &:last-child {
                 margin-left: 4px;
@@ -459,39 +461,45 @@ main {
 
     }
 
-    .controls-container {
+    .artist-controls-container {
         display: flex;
         width: 100%;
         justify-content: center;
         align-items: center;
-        
+
         &:focus {
             outline: none;
         }
+
         .arrow {
             margin: 0 23px;
             @include arrow-btn;
         }
+
         button[data-controls="next"] {
             order: 1;
         }
-        .indicator-container {
+
+        .artist-indicator-container {
             margin-bottom: 6px;
+
             button {
-            border-radius: 50%;
-            border: none;
-            background-color: rgba($clubin-blue, .2);
-            padding: 5px;
-            margin: 0 5px;
-            &:focus {
-                outline: none;
+                border-radius: 50%;
+                border: none;
+                background-color: rgba($clubin-blue, .2);
+                padding: 5px;
+                margin: 0 5px;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            .tns-nav-active {
+                background-color: rgba($clubin-blue, 1);
+                transform: scale(1.4);
             }
         }
-        .tns-nav-active{
-            background-color: rgba($clubin-blue, 1);
-            transform: scale(1.4);
-            }
-        } 
     }
 
     .artist-item {
@@ -547,7 +555,7 @@ main {
             padding-left: 30px;
 
             &__name {
-               @include title_with_underline_style;
+                @include title_with_underline_style;
             }
 
             &__biography {
@@ -560,6 +568,7 @@ main {
     }
 
 }
+
 .subscribe {
     margin-top: 55px;
     width: 100%;
@@ -569,7 +578,7 @@ main {
     background-image: url("../asset/item-img2.png");
     background-size: cover;
     background-position: 0%;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
     padding: 0 90px;
 
@@ -585,17 +594,21 @@ main {
 
         .information {
             width: 45%;
-            h6{
+
+            h6 {
                 font-weight: 300;
             }
         }
+
         .subscribe__form {
             width: 45%;
             display: flex;
             margin: 0 0 0 35px;
+
             *:focus {
                 outline: none;
             }
+
             &__input {
                 width: 75%;
                 padding: .78rem;
@@ -604,6 +617,7 @@ main {
                 border-right: none;
                 font-size: .85em;
             }
+
             &__button {
                 @include btn-style;
                 border: 1px solid #fff;
@@ -615,6 +629,7 @@ main {
         }
     }
 }
+
 .about {
     width: 100%;
     padding: 50px 90px;
@@ -622,24 +637,25 @@ main {
     flex-flow: row wrap;
     justify-content: space-between;
     font-size: 16px;
-    font-family: 'Poppins',sans-serif;
-    background-image: linear-gradient(to right,$clubin-blue 0%,#bd11fa 100%);
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(to right, $clubin-blue 0%, #bd11fa 100%);
 
-    &__texts{
+    &__texts {
         width: 73%;
         color: #283c5c;
 
         &__title {
-            @include title_with_underline_style(#21212e,275px); // line color and width
+            @include title_with_underline_style(#21212e, 275px); // line color and width
             font-size: 2em;
-            font-weight: 600;
+            font-weight: 700;
             position: relative;
         }
+
         &__paragraph {
             font-size: 1em;
             font-weight: 300;
         }
-        
+
     }
 
     &__images {
@@ -648,12 +664,13 @@ main {
         display: flex;
         flex-flow: column nowrap;
         align-items: flex-end;
-        padding-top: 50px ;
+        padding-top: 50px;
 
         .disc-back {
             width: 240px;
             height: 240px;
         }
+
         .disc-front {
             width: 280px;
             height: 280px;
@@ -676,18 +693,79 @@ main {
         }
 
         .market-buttons {
+
             .appStore-button,
             .googlePlay-button {
                 background-color: transparent;
                 border: none;
+
                 img {
                     width: 8em;
                 }
 
             }
+
             .appStore-button {
                 margin-right: 18px;
             }
+        }
+
+    }
+}
+
+.quatation {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px ;
+    background-image: url("../asset/quatation-background.png");
+    background-size: cover;
+
+    .content {
+        width: 75%;
+        padding: 12px;
+        font-size: 16px;
+        background-color: rgba($color: #162640, $alpha: .87);
+        border-radius: 6px;
+
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 2em .8em .3em .8em;
+            color: $clubin-blue;
+
+            h4 {
+                font-size: 2em;
+                margin: 0 auto;
+                font-weight: 700;
+            }
+
+            &__arrows {
+                font-size: 16px;
+
+                .arrow {
+                    @include arrow-btn(#ffffff);
+
+                }
+            }
+        }
+
+        &__text {
+            width: 100%;
+            margin: 14px 0;
+            padding: 6px 17px;
+            color: #ffffff;
+            font-size: .95em;
+            white-space: pre-line;
+            text-align: center;
+        }
+
+        &__button {
+            margin: 4.8em auto .85em;
+            @include btn-style;
         }
 
     }

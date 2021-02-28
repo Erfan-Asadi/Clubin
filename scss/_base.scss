@@ -7,11 +7,12 @@
  $clubin-blue : #46C2FF;
 
  @mixin btn-style {
+     display: block;
      background-image: $gradinet-btn;
      box-shadow: 0 0 40px #822eef;
      border-radius: 6px;
      border: none;
-     padding: .75rem 1.85rem;
+     padding: .85rem 1.9rem;
      color: white;
      font-size: 14px !important;
      font-family: Poppins, sans-serif;
