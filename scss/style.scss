@@ -572,6 +572,7 @@ main {
     font-family: 'Poppins',sans-serif;
     font-size: 16px;
     padding: 0 90px;
+
     &__content {
         width: 100%;
         margin: 34px 0;
@@ -617,12 +618,15 @@ main {
 .about {
     width: 100%;
     padding: 50px 90px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
     font-size: 16px;
     font-family: 'Poppins',sans-serif;
     background-image: linear-gradient(to right,$clubin-blue 0%,#bd11fa 100%);
 
     &__texts{
-        width: 70%;
+        width: 73%;
         color: #283c5c;
 
         &__title {
@@ -636,5 +640,55 @@ main {
             font-weight: 300;
         }
         
+    }
+
+    &__images {
+        width: 27%;
+        position: relative;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: flex-end;
+        padding-top: 50px ;
+
+        .disc-back {
+            width: 240px;
+            height: 240px;
+        }
+        .disc-front {
+            width: 280px;
+            height: 280px;
+            position: absolute;
+            left: 0;
+            top: -32px;
+        }
+    }
+
+    &__footer {
+        flex-basis: 100%;
+        margin: 17px 0 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 16px;
+
+        .about__logo {
+            width: 180px;
+        }
+
+        .market-buttons {
+            .appStore-button,
+            .googlePlay-button {
+                background-color: transparent;
+                border: none;
+                img {
+                    width: 8em;
+                }
+
+            }
+            .appStore-button {
+                margin-right: 18px;
+            }
+        }
+
     }
 }
