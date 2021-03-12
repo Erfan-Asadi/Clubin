@@ -716,7 +716,7 @@ main {
 .quatation {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 32px ;
     background-image: url("../asset/quatation-background.png");
@@ -737,13 +737,17 @@ main {
             padding: 2em .8em .3em .8em;
             color: $clubin-blue;
 
+            &__left {
+                flex-grow: 4;
+            }
             h4 {
                 font-size: 2em;
-                margin: 0 auto;
+               flex-grow: 2.8;
                 font-weight: 700;
             }
 
             &__arrows {
+                flex-grow: 0;
                 font-size: 16px;
 
                 .arrow {
