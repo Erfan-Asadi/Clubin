@@ -783,7 +783,8 @@ main {
     font-size: 16px;
 
     &__header {
-        padding: 23px;
+        margin-top: .3rem;
+        padding: 2rem;
         width: 100%;
         display: flex;
         align-items: center;
@@ -808,7 +809,7 @@ main {
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
         grid-auto-rows: 80px;
         grid-auto-flow: dense;
-        gap: 6px;
+        gap: 14px;
 
         &>div {
             display: flex;
@@ -831,5 +832,39 @@ main {
             grid-column: span 3;
             grid-row: span 3;
         }
+        
     }
+}
+.contacts {
+    position: relative;
+    width: 100%;
+    font-family: 'Poppins',sans-serif;
+    background-image: linear-gradient(to right, $clubin-blue 0%, #bd11fa 100%);
+    padding: 6rem 5rem 2rem 6rem;
+    font-size: 16px;
+
+    &__texts {
+        color: #283c5c;
+
+        &__title {
+            @include title_with_underline_style(#21212e, 275px); // line color and width
+            font-size: 2em;
+            font-weight: 700;
+            position: relative;
+        }
+
+        &__paragraph {
+            margin-top: 1.5em;
+            font-size: 1em;
+            font-weight: 300;
+            white-space: pre-line;
+        }
+        
+    }
+    &__borderShape-img {
+        width: 200px;
+        top: -88px;
+        right: 32px;
+        position: absolute;
+     }
 }
