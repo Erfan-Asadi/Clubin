@@ -202,7 +202,7 @@ main {
 
 .artist-svg {
     left: 32%;
-    top: 935px;
+    top: 1066px;
 }
 
 .banner {
@@ -734,7 +734,7 @@ main {
             justify-content: space-between;
             align-items: center;
             width: 100%;
-            padding: 2em .8em .3em .8em;
+            padding: 2rem .8rem .3rem .8rem;
             color: $clubin-blue;
 
             &__left {
@@ -840,7 +840,7 @@ main {
     width: 100%;
     font-family: 'Poppins',sans-serif;
     background-image: linear-gradient(to right, $clubin-blue 0%, #bd11fa 100%);
-    padding: 6rem 5rem 2rem 6rem;
+    padding: 5rem 5rem 2rem 5rem;
     font-size: 16px;
 
     &__texts {
@@ -867,4 +867,67 @@ main {
         right: 32px;
         position: absolute;
      }
+     &__btn {
+         @include btn-style();
+         background-image: none;
+         background-color: #283C5C;
+         margin: 4rem auto 0;
+         padding: .85rem 3rem;
+     }
+}
+
+.clubin-footer {
+    width: 100%;
+    font-family: 'Poppins',sans-serif;
+    padding: 5rem 5rem 2rem 5rem;
+
+    &__logo {
+        width: 180px;
+    }
+
+    .socialMedia__icon {
+        color: $clubin-blue;
+        border-radius: 50%;
+        border: 2px solid $clubin-blue;
+        padding: .45rem;
+        margin-right: 1.2rem;
+    }
+    .socialMedia-menu {
+        display: flex;
+        flex-flow: row wrap;
+        list-style-type: none;
+    }
+
+    .menu__title {
+        color: $clubin-blue;
+        font-size: 1.2em;
+        flex-basis: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .quick-links {
+        display: flex;
+        flex-flow: column nowrap;
+        li + li {
+            margin-top: 9px;
+
+        }
+        a {
+            font-weight: 300;
+            font-size: 1rem;
+            color: #ffffff;
+        }
+    }
+    .about-us {
+        max-width: 244px;
+        
+        p {
+            color: #ffffff;
+            font-size: 1em;
+            font-weight: 300;
+            line-height: 1.9;
+        }
+    }
+
+
 }
