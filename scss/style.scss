@@ -880,11 +880,22 @@ main {
     width: 100%;
     font-family: 'Poppins',sans-serif;
     padding: 5rem 5rem 2rem 5rem;
-
+    font-weight: 300;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
     &__logo {
         width: 180px;
     }
 
+    .informations {
+        width: 65%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
     .socialMedia__icon {
         color: $clubin-blue;
         border-radius: 50%;
@@ -903,6 +914,7 @@ main {
         font-size: 1.2em;
         flex-basis: 100%;
         margin-bottom: 1rem;
+        display: inline-block;
     }
 
     .quick-links {
@@ -927,6 +939,11 @@ main {
             font-weight: 300;
             line-height: 1.9;
         }
+    }
+    .copyright-text {
+        color: #ffffff;
+        font-weight: 300;
+        margin-left: 5rem;
     }
 
 
