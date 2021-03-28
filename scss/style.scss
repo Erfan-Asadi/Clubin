@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap');
 @import 'base';
-
+@import 'style-responsive';
 body {
     background-color: $body-background !important;
     position: relative;
@@ -27,7 +27,7 @@ body {
     .clubin-header__nav {
         font-size: .8em;
         font-weight: 500;
-        margin-top: 8px;
+        margin-top: .5rem;
 
         a:hover {
             text-decoration: none;
@@ -122,6 +122,7 @@ body {
 
     }
 
+    
     .landing-page__titles {
         display: flex;
         flex-flow: column nowrap;
@@ -133,10 +134,10 @@ body {
             margin-top: 20px;
         }
 
-        h6,
-        button {
-            font-size: .8em;
+        & :is(h6,button) {
+
             color: #ffffff;
+            font-size: .8em;
         }
 
         h6 {
@@ -306,9 +307,7 @@ main {
             justify-self: flex-end;
         }
 
-        .icon-header,
-        .fa-icon,
-        .icon-footer {
+        & :is(.icon-header,.icon-footer,.fa-icon) {
             font-weight: 400;
         }
 
@@ -702,7 +701,6 @@ main {
                 img {
                     width: 8em;
                 }
-
             }
 
             .appStore-button {
@@ -922,7 +920,6 @@ main {
         flex-flow: column nowrap;
         li + li {
             margin-top: 9px;
-
         }
         a {
             font-weight: 300;
@@ -945,6 +942,4 @@ main {
         font-weight: 300;
         margin-left: 5rem;
     }
-
-
 }
