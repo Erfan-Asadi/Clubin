@@ -4,10 +4,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clubin</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
+    /> -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
@@ -46,313 +46,294 @@
         fill="none"
       />
     </svg>
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <header class="clubin-header">
-            <img
-              src="asset/Clubin-logo.svg"
-              class="clubin-header__logo"
-              alt="Clubin-logo"
-              title="Clubin"
-            />
-            <nav class="clubin-header__nav">
-              <a href="#" class="nav-anchors">HOME</a>
-              <a href="#" class="nav-anchors">EVENTS</a>
-              <a href="#" class="nav-anchors">ABOUTUS</a>
-              <a href="#" class="nav-anchors">CONTACT</a>
-              <a href="#" class="nav-btn">Sign In</a>
-              <a href="#" class="nav-btn inline">Sign Up</a>
-            </nav>
-          </header>
-        </div>
-      </div>
-    </div>
-    <main>
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
 
-            <section class="landing-page">
-              <div class="landing-page__titles">
-                <h6>IT’S NOT JUST LOVE FOR MUSIC</h6>
-                <h3>Feel The Rhythm</h3>
-                <button class="landing-page-btn">See All Events</button>
+    <header class="clubin-header">
+      <img
+        src="asset/Clubin-logo.svg"
+        class="clubin-header__logo"
+        alt="Clubin-logo"
+        title="Clubin"
+      />
+      <nav class="clubin-header__nav">
+        <a href="#" class="nav-anchors">HOME</a>
+        <a href="#" class="nav-anchors">EVENTS</a>
+        <a href="#" class="nav-anchors">ABOUTUS</a>
+        <a href="#" class="nav-anchors">CONTACT</a>
+        <a href="#" class="nav-btn">Sign In</a>
+        <a href="#" class="nav-btn inline">Sign Up</a>
+      </nav>
+    </header>
+    <main>
+      <section class="landing-page">
+        <div class="landing-page__titles">
+          <h6>IT’S NOT JUST LOVE FOR MUSIC</h6>
+          <h3>Feel The Rhythm</h3>
+          <button class="landing-page-btn">See All Events</button>
+        </div>
+        <div class="landing-page__img">
+          <img src="asset/item-img2.png" loading="lazy" alt="landing-img" />
+        </div>
+      </section>
+      <section class="container events-container">
+        <svg class="events-svg background-svg">
+          <circle
+            class="inner-circle"
+            cx="580"
+            cy="580"
+            r="200"
+            stroke="red"
+            fill="none"
+          />
+          <circle
+            class="middle-circle"
+            cx="580"
+            cy="580"
+            r="440"
+            stroke="red"
+            fill="none"
+          />
+          <circle
+            class="outer-circle"
+            cx="580"
+            cy="580"
+            r="580"
+            stroke="red"
+            fill="none"
+          />
+        </svg>
+
+        <div class="events">
+          <div class="banner">
+            <div class="banner__cover">
+              <span class="event-time">9pm-4am</span>
+              <button class="book-event-btn">Book Event</button>
+              <h3 class="header">Award Events</h3>
+              <span class="icon-header">
+                <i class="fa fa-calendar fa-icon" aria-hidden="true"></i>
+                30.11.2020
+              </span>
+
+              <p class="banner__cover__detail">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi,
+                atque eaque eius esse et harum inventore ipsam nam
+                necessitatibus nemo pariatur provident.
+              </p>
+
+              <span class="icon-footer">
+                <i class="fas fa-map-marker-alt fa-icon"></i>
+                New York, NY
+              </span>
+            </div>
+          </div>
+          <div class="calendar">
+            <input type="search" class="calendar__find-input" value="Event" />
+            <div class="calendar__item">
+              <div class="item__date">
+                <span class="item__date__number">28</span>
+                <span class="item__date__mounth">Semtember</span>
+                <span class="item__date__weekday">Friday</span>
               </div>
-              <div class="landing-page__img">
-                <img src="asset/item-img2.png" loading='lazy' alt="landing-img" />
+              <h5 class="item__title">The Legendary DJ Supernova</h5>
+              <span class="item__time">9pm-4am</span>
+              <button class="item__btn">Book Event</button>
+            </div>
+            <div class="calendar__item">
+              <div class="item__date">
+                <span class="item__date__number">28</span>
+                <span class="item__date__mounth">Semtember</span>
+                <span class="item__date__weekday">Friday</span>
               </div>
-            </section>
-            <section class="container events-container">
-              <svg class="events-svg background-svg">
-                <circle
-                  class="inner-circle"
-                  cx="580"
-                  cy="580"
-                  r="200"
-                  stroke="red"
-                  fill="none"
-                />
-                <circle
-                  class="middle-circle"
-                  cx="580"
-                  cy="580"
-                  r="440"
-                  stroke="red"
-                  fill="none"
-                />
-                <circle
-                  class="outer-circle"
-                  cx="580"
-                  cy="580"
-                  r="580"
-                  stroke="red"
-                  fill="none"
-                />
-              </svg>
-      
-              <div
-                class="events row d-flex flex-md-nowrap justify-content-between"
-              >
-                <div class="col-md-5 col-12 banner">
-                  <div class="banner__cover">
-                    <span class="event-time">9pm-4am</span>
-                    <button class="book-event-btn">Book Event</button>
-                    <h3 class="header">Award Events</h3>
-                    <span class="icon-header">
-                      <i class="fa fa-calendar fa-icon" aria-hidden="true"></i>
-                      30.11.2020
-                    </span>
-      
-                    <p class="banner__cover__detail">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Animi, atque eaque eius esse et harum inventore ipsam nam
-                      necessitatibus nemo pariatur provident.
-                    </p>
-      
-                    <span class="icon-footer">
-                      <i class="fas fa-map-marker-alt fa-icon"></i>
-                      New York, NY
-                    </span>
-                  </div>
-                </div>
-                <div class="col-md-7 ml-md-4 mt-5 mt-md-0 col-12 calendar">
-                  <input
-                    type="search"
-                    class="calendar__find-input"
-                    value="Event"
-                  />
-                  <div class="calendar__item">
-                    <div class="item__date">
-                      <span class="item__date__number">28</span>
-                      <span class="item__date__mounth">Semtember</span>
-                      <span class="item__date__weekday">Friday</span>
-                    </div>
-                    <h5 class="item__title">The Legendary DJ Supernova</h5>
-                    <span class="item__time">9pm-4am</span>
-                    <button class="item__btn">Book Event</button>
-                  </div>
-                  <div class="calendar__item">
-                    <div class="item__date">
-                      <span class="item__date__number">28</span>
-                      <span class="item__date__mounth">Semtember</span>
-                      <span class="item__date__weekday">Friday</span>
-                    </div>
-                    <h5 class="item__title">The Legendary DJ Supernova</h5>
-                    <span class="item__time">9pm-4am</span>
-                    <button class="item__btn">Book Event</button>
-                  </div>
-                  <div class="calendar__item">
-                    <div class="item__date">
-                      <span class="item__date__number">28</span>
-                      <span class="item__date__mounth">Semtember</span>
-                      <span class="item__date__weekday">Friday</span>
-                    </div>
-                    <h5 class="item__title">The Legendary DJ Supernova</h5>
-                    <span class="item__time">9pm-4am</span>
-                    <button class="item__btn">Book Event</button>
-                  </div>
-                  <div class="calendar__item">
-                    <div class="item__date">
-                      <span class="item__date__number">28</span>
-                      <span class="item__date__mounth">Semtember</span>
-                      <span class="item__date__weekday">Friday</span>
-                    </div>
-                    <h5 class="item__title">The Legendary DJ Supernova</h5>
-                    <span class="item__time">9pm-4am</span>
-                    <button class="item__btn">Book Event</button>
-                  </div>
-                  <div class="calendar__item">
-                    <div class="item__date">
-                      <span class="item__date__number">28</span>
-                      <span class="item__date__mounth">Semtember</span>
-                      <span class="item__date__weekday">Friday</span>
-                    </div>
-                    <h5 class="item__title">The Legendary DJ Supernova</h5>
-                    <span class="item__time">9pm-4am</span>
-                    <button class="item__btn">Book Event</button>
-                  </div>
-      
-                  <div class="calendar__arrows">
-                    <button class="arrow">
-                      <i class="fas fa-arrow-left"></i>
-                    </button>
-                    <button class="arrow">
-                      <i class="fas fa-arrow-right"></i>
-                    </button>
-                  </div>
-                </div>
+              <h5 class="item__title">The Legendary DJ Supernova</h5>
+              <span class="item__time">9pm-4am</span>
+              <button class="item__btn">Book Event</button>
+            </div>
+            <div class="calendar__item">
+              <div class="item__date">
+                <span class="item__date__number">28</span>
+                <span class="item__date__mounth">Semtember</span>
+                <span class="item__date__weekday">Friday</span>
               </div>
-            </section>
-            <section class="artist">
-              
-              <h2 class="artist-title">ARTIST</h2>
-              <article id="artist-item-container">
-                <section class="artist-item">
-                  <header class="header">
-                    <span class="header__location">
-                      <i class="fas fa-map-marker-alt fa-icon"></i>
-                      New York, NY
-                    </span>
-                    <span class="header__degree"> Musician </span>
-                  </header>
-                  <div class="img-container">
-                    <img src="asset/item-img2.png" loading='lazy' alt="item-img2" />
-                  </div>
-                  <div class="artist-info">
-                    <h4 class="artist-info__name">Blake Shelton</h4>
-                    <p class="artist-info__biography">
-                      Lorem ipsum dolor sit amet, atque eaque eius esse et harum
-                      inventore ipsam nam necessi is the tatibus nemo pariatur
-                      provident.
-                    </p>
-                  </div>
-                </section>
-      
-                <section class="artist-item">
-                  <header class="header">
-                    <span class="header__location">
-                      <i class="fas fa-map-marker-alt fa-icon"></i>
-                      New York, NY
-                    </span>
-                    <span class="header__degree"> Musician </span>
-                  </header>
-                  <div class="img-container">
-                    <img src="asset/item-img1.png" loading='lazy' alt="item-img1" />
-                  </div>
-                  <div class="artist-info">
-                    <h4 class="artist-info__name">Steve Angello</h4>
-                    <p class="artist-info__biography">
-                      Lorem ipsum dolor sit amet, atque eaque eius esse et harum
-                      inventore ipsam nam necessi is the tatibus nemo pariatur
-                      provident.
-                    </p>
-                  </div>
-                </section>
-      
-                <section class="artist-item">
-                  <header class="header">
-                    <span class="header__location">
-                      <i class="fas fa-map-marker-alt fa-icon"></i>
-                      New York, NY
-                    </span>
-                    <span class="header__degree"> Musician </span>
-                  </header>
-                  <div class="img-container">
-                    <img src="asset/item-img3.png" loading='lazy' alt="item-img3" />
-                  </div>
-                  <div class="artist-info">
-                    <h4 class="artist-info__name">Blake Shelton</h4>
-                    <p class="artist-info__biography">
-                      Lorem ipsum dolor sit amet, atque eaque eius esse et harum
-                      inventore ipsam nam necessi is the tatibus nemo pariatur
-                      provident.
-                    </p>
-                  </div>
-                </section>
-                <section class="artist-item">
-                  <header class="header">
-                    <span class="header__location">
-                      <i class="fas fa-map-marker-alt fa-icon"></i>
-                      New York, NY
-                    </span>
-                    <span class="header__degree"> Musician </span>
-                  </header>
-                  <div class="img-container">
-                    <img src="asset/item-img2.png" loading='lazy' alt="item-img2" />
-                  </div>
-                  <div class="artist-info">
-                    <h4 class="artist-info__name">Blake Shelton</h4>
-                    <p class="artist-info__biography">
-                      Lorem ipsum dolor sit amet, atque eaque eius esse et harum
-                      inventore ipsam nam necessi is the tatibus nemo pariatur
-                      provident.
-                    </p>
-                  </div>
-                </section>
-      
-                <section class="artist-item">
-                  <header class="header">
-                    <span class="header__location">
-                      <i class="fas fa-map-marker-alt fa-icon"></i>
-                      New York, NY
-                    </span>
-                    <span class="header__degree"> Musician </span>
-                  </header>
-                  <div class="img-container">
-                    <img src="asset/item-img1.png" loading='lazy' alt="item-img1" />
-                  </div>
-                  <div class="artist-info">
-                    <h4 class="artist-info__name">Steve Angello</h4>
-                    <p class="artist-info__biography">
-                      Lorem ipsum dolor sit amet, atque eaque eius esse et harum
-                      inventore ipsam nam necessi is the tatibus nemo pariatur
-                      provident.
-                    </p>
-                  </div>
-                </section>
-      
-                <section class="artist-item">
-                  <header class="header">
-                    <span class="header__location">
-                      <i class="fas fa-map-marker-alt fa-icon"></i>
-                      New York, NY
-                    </span>
-                    <span class="header__degree"> Musician </span>
-                  </header>
-                  <div class="img-container">
-                    <img src="asset/item-img3.png" loading='lazy' alt="item-img3" />
-                  </div>
-                  <div class="artist-info">
-                    <h4 class="artist-info__name">Blake Shelton</h4>
-                    <p class="artist-info__biography">
-                      Lorem ipsum dolor sit amet, atque eaque eius esse et harum
-                      inventore ipsam nam necessi is the tatibus nemo pariatur
-                      provident.
-                    </p>
-                  </div>
-                </section>
-              </article>
-              <div class="artist-controls-container">
-                <button class="arrow">
-                  <i class="fas fa-arrow-left"></i>
-                </button>
-                <button class="arrow">
-                  <i class="fas fa-arrow-right"></i>
-                </button>
-                <div class="artist-indicator-container">
-                  <button></button>
-                  <button></button>
-                  <button></button>
-                  <button></button>
-                  <button></button>
-                  <button></button>
-                </div>
+              <h5 class="item__title">The Legendary DJ Supernova</h5>
+              <span class="item__time">9pm-4am</span>
+              <button class="item__btn">Book Event</button>
+            </div>
+            <div class="calendar__item">
+              <div class="item__date">
+                <span class="item__date__number">28</span>
+                <span class="item__date__mounth">Semtember</span>
+                <span class="item__date__weekday">Friday</span>
               </div>
-            </section>
+              <h5 class="item__title">The Legendary DJ Supernova</h5>
+              <span class="item__time">9pm-4am</span>
+              <button class="item__btn">Book Event</button>
+            </div>
+            <div class="calendar__item">
+              <div class="item__date">
+                <span class="item__date__number">28</span>
+                <span class="item__date__mounth">Semtember</span>
+                <span class="item__date__weekday">Friday</span>
+              </div>
+              <h5 class="item__title">The Legendary DJ Supernova</h5>
+              <span class="item__time">9pm-4am</span>
+              <button class="item__btn">Book Event</button>
+            </div>
+
+            <div class="calendar__arrows">
+              <button class="arrow">
+                <i class="fas fa-arrow-left"></i>
+              </button>
+              <button class="arrow">
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+      <section class="artist">
+        <h2 class="artist-title">ARTIST</h2>
+        <article id="artist-item-container">
+          <section class="artist-item">
+            <header class="header">
+              <span class="header__location">
+                <i class="fas fa-map-marker-alt fa-icon"></i>
+                New York, NY
+              </span>
+              <span class="header__degree"> Musician </span>
+            </header>
+            <div class="img-container">
+              <img src="asset/item-img2.png" loading="lazy" alt="item-img2" />
+            </div>
+            <div class="artist-info">
+              <h4 class="artist-info__name">Blake Shelton</h4>
+              <p class="artist-info__biography">
+                Lorem ipsum dolor sit amet, atque eaque eius esse et harum
+                inventore ipsam nam necessi is the tatibus nemo pariatur
+                provident.
+              </p>
+            </div>
+          </section>
+
+          <section class="artist-item">
+            <header class="header">
+              <span class="header__location">
+                <i class="fas fa-map-marker-alt fa-icon"></i>
+                New York, NY
+              </span>
+              <span class="header__degree"> Musician </span>
+            </header>
+            <div class="img-container">
+              <img src="asset/item-img1.png" loading="lazy" alt="item-img1" />
+            </div>
+            <div class="artist-info">
+              <h4 class="artist-info__name">Steve Angello</h4>
+              <p class="artist-info__biography">
+                Lorem ipsum dolor sit amet, atque eaque eius esse et harum
+                inventore ipsam nam necessi is the tatibus nemo pariatur
+                provident.
+              </p>
+            </div>
+          </section>
+
+          <section class="artist-item">
+            <header class="header">
+              <span class="header__location">
+                <i class="fas fa-map-marker-alt fa-icon"></i>
+                New York, NY
+              </span>
+              <span class="header__degree"> Musician </span>
+            </header>
+            <div class="img-container">
+              <img src="asset/item-img3.png" loading="lazy" alt="item-img3" />
+            </div>
+            <div class="artist-info">
+              <h4 class="artist-info__name">Blake Shelton</h4>
+              <p class="artist-info__biography">
+                Lorem ipsum dolor sit amet, atque eaque eius esse et harum
+                inventore ipsam nam necessi is the tatibus nemo pariatur
+                provident.
+              </p>
+            </div>
+          </section>
+          <section class="artist-item">
+            <header class="header">
+              <span class="header__location">
+                <i class="fas fa-map-marker-alt fa-icon"></i>
+                New York, NY
+              </span>
+              <span class="header__degree"> Musician </span>
+            </header>
+            <div class="img-container">
+              <img src="asset/item-img2.png" loading="lazy" alt="item-img2" />
+            </div>
+            <div class="artist-info">
+              <h4 class="artist-info__name">Blake Shelton</h4>
+              <p class="artist-info__biography">
+                Lorem ipsum dolor sit amet, atque eaque eius esse et harum
+                inventore ipsam nam necessi is the tatibus nemo pariatur
+                provident.
+              </p>
+            </div>
+          </section>
+
+          <section class="artist-item">
+            <header class="header">
+              <span class="header__location">
+                <i class="fas fa-map-marker-alt fa-icon"></i>
+                New York, NY
+              </span>
+              <span class="header__degree"> Musician </span>
+            </header>
+            <div class="img-container">
+              <img src="asset/item-img1.png" loading="lazy" alt="item-img1" />
+            </div>
+            <div class="artist-info">
+              <h4 class="artist-info__name">Steve Angello</h4>
+              <p class="artist-info__biography">
+                Lorem ipsum dolor sit amet, atque eaque eius esse et harum
+                inventore ipsam nam necessi is the tatibus nemo pariatur
+                provident.
+              </p>
+            </div>
+          </section>
+
+          <section class="artist-item">
+            <header class="header">
+              <span class="header__location">
+                <i class="fas fa-map-marker-alt fa-icon"></i>
+                New York, NY
+              </span>
+              <span class="header__degree"> Musician </span>
+            </header>
+            <div class="img-container">
+              <img src="asset/item-img3.png" loading="lazy" alt="item-img3" />
+            </div>
+            <div class="artist-info">
+              <h4 class="artist-info__name">Blake Shelton</h4>
+              <p class="artist-info__biography">
+                Lorem ipsum dolor sit amet, atque eaque eius esse et harum
+                inventore ipsam nam necessi is the tatibus nemo pariatur
+                provident.
+              </p>
+            </div>
+          </section>
+        </article>
+        <div class="artist-controls-container">
+          <button class="arrow">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+          <button class="arrow">
+            <i class="fas fa-arrow-right"></i>
+          </button>
+          <div class="artist-indicator-container">
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+          </div>
+        </div>
+      </section>
       <svg class="artist-svg background-svg">
         <circle
           class="inner-circle"
@@ -380,53 +361,63 @@
         />
       </svg>
       <section class="subscribe">
-        
-  
-              <div class="subscribe__content">
-                <div class="information">
-                  <h4>Subscribe</h4>
-                  <h6>To receive info on our latest news and episods</h6>
-                </div>
-                <form action="" class="subscribe__form">
-                  <input class="subscribe__form__input" type="text" placeholder="Your Email" />
-                  <button class="subscribe__form__button" type="submit">Subscribe</button>
-                </form>
-              </div>
-         
+        <div class="subscribe__content">
+          <div class="information">
+            <h4>Subscribe</h4>
+            <h6>To receive info on our latest news and episods</h6>
+          </div>
+          <form action="" class="subscribe__form">
+            <input
+              class="subscribe__form__input"
+              type="text"
+              placeholder="Your Email"
+            />
+            <button class="subscribe__form__button" type="submit">
+              Subscribe
+            </button>
+          </form>
+        </div>
       </section>
-      <section class="about">   
-              <div class="about__texts">
-                <h3 class="about__texts__title">ABOUT CLOOBIN </h3>
-                <p class="about__texts__paragraph">
-                  You begin with a text, you sculpt information, you chisel away what's not needed, 
-                  you come to the point, make things clear, add value, you're a content person, you
-                   like words. Design is no afterthought, far from it, but it comes in a deserved second.
-                    Anyway, you still use Lorem Ipsum and rightly so, as it will always have a place in the 
-                    web workers toolbox, as things happen, not always the way you like it, not always in the
-                     preferred order. Even if your less into design and more into content strategy you may find
-                      some redeeming value with, wait for it, dummy copy, no less.
-    
-                </p>
-              </div>
-              <div class="about__images">
-                <img class="disc-back" src="asset/disc-back.png" alt="disc-back">
-                <img class="disc-front" src="asset/disc-front.png" alt="disc-front">
-              </div>
-              <div class="about__footer">
-                <img class="about__logo" src="asset/about-logo.svg" alt="Clubin-logo">
-                <div class="market-buttons">
-
-                  <a href="asset/Clubin-logo.svg" download class="appStore-button">
-                    <img src="asset/appStore-button.svg" alt="download-from-appStore">
-                  </a>
-                  <a href="asset/about-logo.svg" download class="googlePlay-button">
-                    <img src="asset/googlePlay-button.svg" alt="download-from-googlePlay">
-                  </a>
-
-                </div>
-              </div>
-              
-        
+      <section class="about">
+        <div class="about__texts">
+          <h3 class="about__texts__title">ABOUT CLOOBIN</h3>
+          <p class="about__texts__paragraph">
+            You begin with a text, you sculpt information, you chisel away
+            what's not needed, you come to the point, make things clear, add
+            value, you're a content person, you like words. Design is no
+            afterthought, far from it, but it comes in a deserved second.
+            Anyway, you still use Lorem Ipsum and rightly so, as it will always
+            have a place in the web workers toolbox, as things happen, not
+            always the way you like it, not always in the preferred order. Even
+            if your less into design and more into content strategy you may find
+            some redeeming value with, wait for it, dummy copy, no less.
+          </p>
+        </div>
+        <div class="about__images">
+          <img class="disc-back" src="asset/disc-back.png" alt="disc-back" />
+          <img class="disc-front" src="asset/disc-front.png" alt="disc-front" />
+        </div>
+        <div class="about__footer">
+          <img
+            class="about__logo"
+            src="asset/about-logo.svg"
+            alt="Clubin-logo"
+          />
+          <div class="market-buttons">
+            <a href="asset/Clubin-logo.svg" download class="appStore-button">
+              <img
+                src="asset/appStore-button.svg"
+                alt="download-from-appStore"
+              />
+            </a>
+            <a href="asset/about-logo.svg" download class="googlePlay-button">
+              <img
+                src="asset/googlePlay-button.svg"
+                alt="download-from-googlePlay"
+              />
+            </a>
+          </div>
+        </div>
       </section>
       <section class="quatation">
         <div class="content">
@@ -443,118 +434,149 @@
             </div>
           </div>
           <p class="content__text">
-            You begin with a text, you sculpt information, you chisel away what's not needed, you come to the p contey you may find some redeeming value with, wait for it, dummy copy, no less.
-
-There's lot of hate out there for a text that amounts to little more than garbled words in an old language. The villagers are out there with a vengeance to get that Frankenstein, wielding torches and pitchforks, wanting to tar and feather it at the least, running it out of town in shame.
+            You begin with a text, you sculpt information, you chisel away
+            what's not needed, you come to the p contey you may find some
+            redeeming value with, wait for it, dummy copy, no less. There's lot
+            of hate out there for a text that amounts to little more than
+            garbled words in an old language. The villagers are out there with a
+            vengeance to get that Frankenstein, wielding torches and pitchforks,
+            wanting to tar and feather it at the least, running it out of town
+            in shame.
           </p>
-          <button class="content__button">
-            REGISTER NOW
-          </button>
+          <button class="content__button">REGISTER NOW</button>
         </div>
       </section>
       <section class="party">
         <div class="party__header">
           <div class="title">CLOOBIN PARTY</div>
           <p class="detail">
-            Dress sharp, tie your knot, and meet us at Cloobin party — the best place for your bachelor party celebration.
+            Dress sharp, tie your knot, and meet us at Cloobin party — the best
+            place for your bachelor party celebration.
           </p>
         </div>
         <div class="party-gallery">
           <div class="normal-img">
-            <img src="asset/party-img-1.png" alt="party-img-1">
+            <img src="asset/party-img-1.png" alt="party-img-1" />
           </div>
           <div class="vertical-img">
-            <img src="asset/party-img-2.png"  alt="party-img-2">
-          </div>
-          <div class="vertical-img" >
-            <img src="asset/party-img-3.png"alt="party-img-3">
+            <img src="asset/party-img-2.png" alt="party-img-2" />
           </div>
           <div class="vertical-img">
-            <img src="asset/party-img-4.png"  alt="party-img-4">
+            <img src="asset/party-img-3.png" alt="party-img-3" />
+          </div>
+          <div class="vertical-img">
+            <img src="asset/party-img-4.png" alt="party-img-4" />
           </div>
           <div class="normal-img">
-            <img src="asset/party-img-7.png" alt="party-img-7">
+            <img src="asset/party-img-7.png" alt="party-img-7" />
           </div>
           <div class="vertical-img">
-            <img src="asset/party-img-8.png" alt="party-img-8">
+            <img src="asset/party-img-8.png" alt="party-img-8" />
           </div>
           <div class="normal-img">
-            <img src="asset/party-img-5.png" alt="party-img-5">
+            <img src="asset/party-img-5.png" alt="party-img-5" />
           </div>
           <div class="vertical-img">
-            <img src="asset/party-img-9.png"  alt="party-img-9">
+            <img src="asset/party-img-9.png" alt="party-img-9" />
           </div>
           <div class="normal-img">
-            <img src="asset/party-img-6.png" alt="party-img-6">
+            <img src="asset/party-img-6.png" alt="party-img-6" />
           </div>
-          
         </div>
       </section>
       <section class="contacts">
         <div class="contacts__texts">
           <h3 class="contacts__texts__title">CONTACTS</h3>
           <p class="contacts__texts__paragraph">
-            You begin with a text, you sculpt information, you chisel away what's not needed, you come to the point, make things clear, add value, you're a content person, you like words. Design is no afterthought, far from it, but it comes in a deserved second. Anyway, you still use Lorem Ipsum and rightly so, as it will always have a place in the web workers toolbox, as things happen, not always the way you like it, not always in the preferred order. Even if your less into design and more into content strategy you may find some redeeming value with, wait for it, dummy copy, no less.
-
-There's lot of hate out there for a text that amounts to little more than garbled words in an old language. The villagers are out there with a vengeance to get that Frankenstein, wielding torches and pitchforks, wanting to tar and feather it at the least, running it out of town in shame.
+            You begin with a text, you sculpt information, you chisel away
+            what's not needed, you come to the point, make things clear, add
+            value, you're a content person, you like words. Design is no
+            afterthought, far from it, but it comes in a deserved second.
+            Anyway, you still use Lorem Ipsum and rightly so, as it will always
+            have a place in the web workers toolbox, as things happen, not
+            always the way you like it, not always in the preferred order. Even
+            if your less into design and more into content strategy you may find
+            some redeeming value with, wait for it, dummy copy, no less. There's
+            lot of hate out there for a text that amounts to little more than
+            garbled words in an old language. The villagers are out there with a
+            vengeance to get that Frankenstein, wielding torches and pitchforks,
+            wanting to tar and feather it at the least, running it out of town
+            in shame.
           </p>
         </div>
-        <img src="asset/border-shape.png" alt="border-shape" class="contacts__borderShape-img">
+        <img
+          src="asset/border-shape.png"
+          alt="border-shape"
+          class="contacts__borderShape-img"
+        />
         <button class="contacts__btn">Contact</button>
       </section>
       <footer class="clubin-footer">
         <img
-        src="asset/Clubin-logo.svg"
-        class="clubin-footer__logo"
-        alt="Clubin-logo"
-        title="Clubin"
-      />
+          src="asset/Clubin-logo.svg"
+          class="clubin-footer__logo"
+          alt="Clubin-logo"
+          title="Clubin"
+        />
 
-      <div class="informations">
-        <ul class="socialMedia-menu">
-          <span class="menu__title">Contact</span> 
-          <li>
-            <a href="https://www.instagram.com/erfanevis/" title="instagram">
-              <i class="fab fa-instagram socialMedia__icon" aria-hidden="true"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://twitter.com/erfanasadi19" title="twitter">
-              <i class="fab fa-twitter socialMedia__icon" aria-hidden="true"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/Erfan-Asadi" title="github">
-              <i class="fab fa-github socialMedia__icon" aria-hidden="true"></i>
-            </a>
-          </li>
-        </ul>
-        <ul class="quick-links">
-          <span class="menu__title">Quick Links</span> 
-          <li>
-            <a href="#">HOME</a>
-          </li>
-          <li>
-            <a href="#">EVENT</a>
-          </li>
-          <li>
-            <a href="#">ABOUT US</a>
-          </li>
-          <li>
-            <a href="#">CONTACT</a>
-          </li>
-          <li> 
-            <a href="#">FAQ</a>
-          </li>
-        </ul>
-        <div class="about-us">
-          <span class="menu__title">About Us</span>
-          <p>
-            You begin with a text, you sculpt information, you chisel away what's not needed, you come to the point, make things clear, add value, you're a content person, you like words. 
+        <div class="informations">
+          <ul class="socialMedia-menu">
+            <span class="menu__title">Contact</span>
+            <li>
+              <a href="https://www.instagram.com/erfanevis/" title="instagram">
+                <i
+                  class="fab fa-instagram socialMedia__icon"
+                  aria-hidden="true"
+                ></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/erfanasadi19" title="twitter">
+                <i
+                  class="fab fa-twitter socialMedia__icon"
+                  aria-hidden="true"
+                ></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/Erfan-Asadi" title="github">
+                <i
+                  class="fab fa-github socialMedia__icon"
+                  aria-hidden="true"
+                ></i>
+              </a>
+            </li>
+          </ul>
+          <ul class="quick-links">
+            <span class="menu__title">Quick Links</span>
+            <li>
+              <a href="#">HOME</a>
+            </li>
+            <li>
+              <a href="#">EVENT</a>
+            </li>
+            <li>
+              <a href="#">ABOUT US</a>
+            </li>
+            <li>
+              <a href="#">CONTACT</a>
+            </li>
+            <li>
+              <a href="#">FAQ</a>
+            </li>
+          </ul>
+          <div class="about-us">
+            <span class="menu__title">About Us</span>
+            <p>
+              You begin with a text, you sculpt information, you chisel away
+              what's not needed, you come to the point, make things clear, add
+              value, you're a content person, you like words.
+            </p>
+          </div>
+          <p class="copyright-text">
+            &#169; All Rights Reserved | Designed By KorolAlena
           </p>
         </div>
-        <p class="copyright-text">&#169; All Rights Reserved | Designed By KorolAlena</p>
-      </div>
       </footer>
     </main>
     <script
@@ -562,7 +584,7 @@ There's lot of hate out there for a text that amounts to little more than garble
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
       crossorigin="anonymous"
     ></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script> -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <script src="script/clubin-tinySlider.js"></script>
