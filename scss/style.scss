@@ -25,10 +25,14 @@ body {
     }
 
     .clubin-header__nav {
+        width: fit-content;
         font-size: .8em;
         font-weight: 500;
         margin-top: .5rem;
-
+        ul {
+            display: flex;
+            align-items: center;
+        }
         a:hover {
             text-decoration: none;
         }
@@ -79,7 +83,7 @@ body {
             }
         }
 
-        a+a {
+        li+li {
             margin-left: 27px;
         }
 
@@ -213,11 +217,11 @@ main {
     width: 100%;
     padding: 0 7rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-flow: row wrap;
     
     .banner {
-        width: 43%;
+        width: 40%;
         position: relative;
         border-radius: 7px;
         box-shadow: 0 0 40px #000000;
@@ -345,17 +349,13 @@ main {
     }
     
     .calendar {
-        width: 53%;
+        width: 55%;
         display: flex;
         flex-flow: column nowrap;
         max-height: 550px;
         background-color: transparent;
     
         &__item {
-            &+& {
-                margin-top: 19px;
-            }
-    
             $vertical_padding : 4px;
             width: 100%;
             display: flex;
@@ -371,7 +371,7 @@ main {
             border-radius: 6px;
             padding:4px 0 4px 12px;
             cursor: pointer;
-            height: 60px;
+            height: 64px;
     
             .item__date {
                 display: flex;
@@ -427,7 +427,9 @@ main {
                 color: $clubin-blue;
             }
         }
-    
+        .calendar__item + .calendar__item {
+            margin-top: 17px;
+        }
         &__find-input {
             border: none;
             background-color: rgba($clubin-blue, .1);
@@ -485,10 +487,13 @@ main {
         &:focus {
             outline: none;
         }
-
+        
         .arrow {
             margin: 0 23px;
             @include arrow-btn;
+            &:focus {
+                outline: none;
+            }
         }
 
         button[data-controls="next"] {
@@ -609,7 +614,7 @@ main {
 
         .information {
             width: 45%;
-
+            font-size: 1.2rem;
             h6 {
                 font-weight: 300;
             }
@@ -619,10 +624,6 @@ main {
             width: 45%;
             display: flex;
             margin: 0 0 0 35px;
-
-            *:focus {
-                outline: none;
-            }
 
             &__input {
                 width: 75%;
@@ -778,7 +779,6 @@ main {
             padding: 6px 17px;
             color: #ffffff;
             font-size: .95em;
-            white-space: pre-line;
             text-align: center;
         }
 
