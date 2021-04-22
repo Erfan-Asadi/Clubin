@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap');
 @import 'base';
+
 body {
     background-color: $body-background !important;
     position: relative;
@@ -28,10 +29,16 @@ body {
         font-size: .8em;
         font-weight: 500;
         margin-top: .5rem;
+
         ul {
             display: flex;
             align-items: center;
         }
+
+        ul.open {
+            height: 260px;
+        }
+
         a:hover {
             text-decoration: none;
         }
@@ -105,19 +112,46 @@ body {
 
     }
 }
+
 .hamburger-btn {
     width: fit-content;
     border: none;
     background-color: transparent;
     padding: 4px;
     display: none;
+    &:focus {
+        outline: none;
+    }
     .hamburger-line {
-        width: 35px;
+        width: 31px;
         height: 3px;
         margin: 6px 0;
         background-color: white;
+        transform-origin: right;
+        transition: all .3s linear 0s;
+    }
+
+    
+    &.clicked {
+        .hamburger-line {
+            margin: 8px 0;
+
+            &.middle {
+                opacity: 0;
+            }
+
+            &.top {
+                transform: rotate(-45deg);
+            }
+
+            &.bottom {
+                transform: rotate(45deg);
+            }
+        }
+
     }
 }
+
 .landing-page {
     width: 100%;
     min-height: 90vh;
@@ -141,7 +175,7 @@ body {
 
     }
 
-    
+
     .landing-page__titles {
         display: flex;
         flex-flow: column nowrap;
@@ -153,7 +187,7 @@ body {
             margin-top: 20px;
         }
 
-        & :is(h6,button) {
+        & :is(h6, button) {
 
             color: #ffffff;
             font-size: .8em;
@@ -232,7 +266,7 @@ main {
     display: flex;
     justify-content: space-between;
     flex-flow: row wrap;
-    
+
     .banner {
         width: 40%;
         position: relative;
@@ -247,46 +281,46 @@ main {
         font-family: Poppins, sans-serif;
         cursor: pointer;
         overflow: hidden;
-    
+
         .fa-icon {
             color: #BD11FA;
             font-size: 1.35em;
             margin: 0 4px;
         }
-    
+
         &:hover {
             .banner__cover {
-                
+
                 top: 0;
                 justify-content: space-evenly;
                 align-content: center;
                 justify-items: center;
                 row-gap: 40px;
                 // grid-template: repeat(auto-content) / repeat(4, 1fr) ;
-    
+
                 grid-template-areas:
                     "i . . f"
                     "h h h h"
                     ". t t ."
                     ". b b ."
                     ". . . .";
-    
+
                 .banner__cover__detail {
                     display: none;
                 }
-    
+
                 .event-time {
                     display: inline;
                     grid-area: t;
                 }
-    
+
                 .book-event-btn {
                     display: block;
                     grid-area: b;
                 }
             }
         }
-    
+
         &__cover {
             width: 100%;
             position: absolute;
@@ -298,27 +332,27 @@ main {
             grid-template-areas: "h h h i"
                 "p p p p"
                 "f f f f";
-    
+
             background-color: rgba(#162640, .59);
             padding: .2rem 1rem .6rem 1.6rem;
             color: #fff;
-    
+
             .header {
                 grid-area: h;
                 font-size: 2em;
                 font-weight: 700;
             }
-    
+
             .event-time,
             .book-event-btn {
                 display: none;
             }
-    
+
             .event-time {
                 font-size: 1.5em;
                 color: $clubin-blue;
             }
-    
+
             .book-event-btn {
                 padding: 25px 15px;
                 border-radius: 6px;
@@ -327,49 +361,49 @@ main {
                 color: #BD11FA;
                 font-size: 1em;
                 font-weight: 300;
-    
+
             }
-    
+
             .icon-header {
                 color: $clubin-blue;
                 grid-area: i;
                 align-self: center;
                 justify-self: flex-end;
             }
-    
-            & :is(.icon-header,.icon-footer,.fa-icon) {
+
+            & :is(.icon-header, .icon-footer, .fa-icon) {
                 font-weight: 400;
             }
-    
+
             .banner__cover__detail {
                 font-weight: 300;
                 font-size: 15px;
                 line-height: 1.65;
                 grid-area: p;
             }
-    
+
             .icon-footer {
                 color: $clubin-blue;
                 grid-area: f;
                 justify-self: end;
-    
+
                 .fa-icon {
                     font-weight: 900;
                 }
             }
-    
+
         }
     }
-    
+
     .calendar {
         width: 55%;
         display: flex;
         flex-flow: column nowrap;
         max-height: 550px;
         background-color: transparent;
-    
+
         &__item {
-            $vertical_padding : 4px;
+            $vertical_padding: 4px;
             width: 100%;
             display: flex;
             justify-content: space-between;
@@ -377,15 +411,15 @@ main {
             font-size: 16px;
             color: #ffffff;
             font-family: 'Poppins',
-            sans-serif;
+                sans-serif;
             background-color: #20202c;
             box-shadow: 0 0 40px #000000;
             overflow: hidden;
             border-radius: 6px;
-            padding:4px 0 4px 12px;
+            padding: 4px 0 4px 12px;
             cursor: pointer;
             height: 64px;
-    
+
             .item__date {
                 display: flex;
                 flex-flow: column wrap;
@@ -394,17 +428,17 @@ main {
                 font-size: 1em;
                 min-width: 135px;
                 color: $clubin-blue;
-    
+
                 &__mounth {
                     font-size: .8125em;
                     margin-bottom: .4rem;
                 }
-    
+
                 &__weekday {
                     font-size: .75em;
                     margin-top: -3px;
                 }
-    
+
                 &__number {
                     // margin-right: 18px;
                     font-size: 2.37em;
@@ -412,7 +446,7 @@ main {
                     color: #BD11FA;
                 }
             }
-    
+
             .item__title,
             .item__btn {
                 font-size: .9375em;
@@ -422,7 +456,7 @@ main {
                 text-align: center;
                 line-height: 1.33;
             }
-    
+
             .item__btn {
                 border-radius: 6px;
                 border: none;
@@ -430,20 +464,22 @@ main {
                 height: calc(100% + #{$vertical_padding *2});
                 background-color: #BD11FA;
                 padding: 0 16px;
-    
+
                 &:focus {
                     outline: none;
                 }
             }
-    
+
             .item__time {
                 font-size: .75em;
                 color: $clubin-blue;
             }
         }
-        .calendar__item + .calendar__item {
+
+        .calendar__item+.calendar__item {
             margin-top: 17px;
         }
+
         &__find-input {
             border: none;
             background-color: rgba($clubin-blue, .1);
@@ -451,23 +487,23 @@ main {
             width: 155px;
             margin-bottom: 40px;
             padding: 10px 15px;
-    
+
             &:focus {
                 outline: none;
             }
         }
-    
+
         &__arrows {
             margin-top: 25px;
             align-self: flex-end;
-    
+
             .arrow {
                 @include arrow-btn;
-    
+
                 &:last-child {
                     margin-left: 4px;
                 }
-    
+
                 &:focus {
                     outline: none;
                 }
@@ -501,10 +537,11 @@ main {
         &:focus {
             outline: none;
         }
-        
+
         .arrow {
             margin: 0 23px;
             @include arrow-btn;
+
             &:focus {
                 outline: none;
             }
@@ -630,6 +667,7 @@ main {
         .information {
             width: 45%;
             font-size: 1.55rem;
+
             h6 {
                 font-weight: 300;
             }
@@ -863,13 +901,14 @@ main {
             grid-column: span 3;
             grid-row: span 3;
         }
-        
+
     }
 }
+
 .contacts {
     position: relative;
     width: 100%;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-image: linear-gradient(to right, $clubin-blue 0%, #bd11fa 100%);
     padding: 5rem 5rem 2rem 5rem;
     font-size: 16px;
@@ -891,32 +930,35 @@ main {
             line-height: 1.5;
             max-width: 900px;
         }
-        
+
     }
+
     &__borderShape-img {
         width: 200px;
         top: -88px;
         right: 32px;
         position: absolute;
-     }
-     &__btn {
-         @include btn-style();
-         background-image: none;
-         background-color: #283C5C;
-         margin: 4rem auto 0;
-         padding: .85rem 3rem;
-     }
+    }
+
+    &__btn {
+        @include btn-style();
+        background-image: none;
+        background-color: #283C5C;
+        margin: 4rem auto 0;
+        padding: .85rem 3rem;
+    }
 }
 
 .clubin-footer {
     width: 100%;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Poppins', sans-serif;
     padding: 5rem 5rem 2rem 5rem;
     font-weight: 300;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: flex-start;
+
     &__logo {
         width: 180px;
     }
@@ -928,6 +970,7 @@ main {
         justify-content: space-between;
         align-items: flex-start;
     }
+
     .socialMedia__icon {
         color: $clubin-blue;
         border-radius: 50%;
@@ -935,6 +978,7 @@ main {
         padding: .45rem;
         margin-right: 1.2rem;
     }
+
     .socialMedia-menu {
         display: flex;
         flex-flow: row wrap;
@@ -952,18 +996,21 @@ main {
     .quick-links {
         display: flex;
         flex-flow: column nowrap;
-        li + li {
+
+        li+li {
             margin-top: 9px;
         }
+
         a {
             font-weight: 300;
             font-size: 1rem;
             color: #ffffff;
         }
     }
+
     .about-us {
         max-width: 244px;
-        
+
         p {
             color: #ffffff;
             font-size: 1em;
@@ -971,6 +1018,7 @@ main {
             line-height: 1.9;
         }
     }
+
     .copyright-text {
         color: #ffffff;
         font-weight: 300;
