@@ -377,7 +377,7 @@ main {
 
             .banner__cover__detail {
                 font-weight: 300;
-                font-size: 15px;
+                font-size: 1em;
                 line-height: 1.65;
                 grid-area: p;
             }
@@ -652,7 +652,7 @@ main {
     background-position: 0%;
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
-    padding: 0 90px;
+    padding: 0 4vw;
 
     &__content {
         width: 100%;
@@ -674,9 +674,8 @@ main {
         }
 
         .subscribe__form {
-            width: 45%;
+            width: 50%;
             display: flex;
-            margin: 0 0 0 35px;
 
             &__input {
                 width: 75%;
@@ -701,7 +700,7 @@ main {
 
 .about {
     width: 100%;
-    padding: 50px 90px;
+    padding: 50px 4vw;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -737,13 +736,11 @@ main {
         padding-top: 50px;
 
         .disc-back {
-            width: 240px;
-            height: 240px;
+            width: #{"max(180px,16vw)"};
         }
 
         .disc-front {
-            width: 280px;
-            height: 280px;
+            width: #{"max(210px,20vw)"};
             position: absolute;
             left: 0;
             top: -32px;
@@ -787,7 +784,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 32px;
+    padding: 2rem 4vw;
     background-image: url("../asset/quatation-background.png");
     background-size: cover;
 
@@ -847,7 +844,7 @@ main {
 
 .party {
     width: 100%;
-    padding: 50px 90px;
+    padding: 3rem 4vw;
     background-color: #21212e;
     font-size: 16px;
 
@@ -898,8 +895,8 @@ main {
         }
 
         .normal-img {
-            grid-column: span 3;
-            grid-row: span 3;
+            grid-column: span 4;
+            grid-row: span 4;
         }
 
     }
@@ -910,7 +907,7 @@ main {
     width: 100%;
     font-family: 'Poppins', sans-serif;
     background-image: linear-gradient(to right, $clubin-blue 0%, #bd11fa 100%);
-    padding: 5rem 5rem 2rem 5rem;
+    padding:3rem 4vw 2rem;
     font-size: 16px;
 
     &__texts {
@@ -952,7 +949,7 @@ main {
 .clubin-footer {
     width: 100%;
     font-family: 'Poppins', sans-serif;
-    padding: 5rem 5rem 2rem 5rem;
+    padding: 3rem 4vw 2rem;
     font-weight: 300;
     display: flex;
     flex-flow: row wrap;

@@ -35,15 +35,106 @@
         }
     }
 
-    .calendar {
-        &__item {
-            font-size: 15px;
-            
-            .item__title,
-            .item__btn {
-                font-size: .9em;
 
+    .events .calendar {
+        .calendar__item {
+            font-size: 15px;
+            padding: 4px 0 4px 10px;
+
+            .item__btn {
+                padding: 0 11px;
             }
+        }
+
+        .banner {
+            font-size: 14px;
+            width: 43%;
+
+            .banner__cover {
+                padding: .2rem 1rem .5rem 1.2rem;
+
+                .header {
+                    font-size: 1.8em;
+                }
+            }
+        }
+
+    }
+
+    .subscribe {
+        .subscribe__content {
+            padding: 1.5rem;
+            flex-flow: row wrap;
+            justify-content: center;
+
+            .information {
+                width: 100%;
+            }
+
+            .subscribe__form {
+                margin: 2rem 0 0 .5rem;
+                width: 80%;
+            }
+        }
+    }
+
+    .about {
+        padding: 1.3rem 4vw;
+
+        .about__images {
+            display: none;
+        }
+
+        .about__texts {
+            width: 100%;
+        }
+    }
+    
+
+}
+
+@media screen and (max-width: 767px),
+(max-width: 800px) {
+
+    // mobile responsive sizes
+    .events :is(.calendar, .banner) {
+        width: 100%;
+    }
+
+    .events {
+
+        .calendar {
+            margin-top: 4rem;
+
+            .calendar__find-input {
+                margin-bottom: 20px;
+            }
+        }
+
+        .banner {
+            background-position-x: -100px;
+        }
+    }
+
+    .quatation {
+        .content {
+            width: 90%;
+        }
+    }
+
+    .party {
+        .party__header {
+            padding: 1rem;
+            .detail {
+                margin-left: 15px;
+            }
+        }
+
+    }
+    .contacts {
+        .contacts__borderShape-img {
+            width: 150px;
+            top: -70px;
         }
     }
 
