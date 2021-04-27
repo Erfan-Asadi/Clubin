@@ -1,5 +1,4 @@
-@media screen and (min-width: 768px) and (max-width: 1024px),
-(max-width: 1024px) {
+@media screen and (max-width: 1024px) {
 
     /*tablet responsive size*/
     .hamburger-btn {
@@ -9,6 +8,7 @@
     .clubin-header {
         flex-wrap: wrap;
         background-color: #21212e;
+
         &__nav {
             flex-basis: 100%;
             order: 1;
@@ -18,19 +18,32 @@
                 transition: height .3s linear 0s;
                 overflow: hidden;
                 height: 0;
+
                 li {
                     margin-left: 0px !important;
                     margin-top: 18px;
                 }
 
-                
+
                 .nav-btn.inline {
                     margin-top: 8px;
                     display: inline-block;
 
                 }
             }
-           
+
+        }
+    }
+
+    .calendar {
+        &__item {
+            font-size: 15px;
+            
+            .item__title,
+            .item__btn {
+                font-size: .9em;
+
+            }
         }
     }
 
