@@ -88,6 +88,9 @@
         .about__texts {
             width: 100%;
         }
+        .about__logo {
+            width: 155px;
+        }
     }
     
 
@@ -97,6 +100,13 @@
 (max-width: 800px) {
 
     // mobile responsive sizes
+
+    .clubin-header__logo {
+        width: 155px;
+    }
+    .landing-page__img {
+        display: none
+    }
     .events :is(.calendar, .banner) {
         width: 100%;
     }
@@ -137,5 +147,36 @@
             top: -70px;
         }
     }
+    .clubin-footer {
+        .clubin-footer__logo {
+            margin: 0 auto;
+            width: 155px;
+        }
+        .informations {
+            width: 100%;
+            padding: 1rem 4vw 1rem;
+            flex-direction: column;
+            & > * {
+                margin: 1.5rem 0;
+            }
 
+            .about-us {
+                max-width: 100%;
+            }
+            .copyright-text {
+                margin: 0 auto;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    // small phones
+    .about {
+
+        .about__logo {
+            display: none;
+        }
+    } 
 }
