@@ -107,9 +107,11 @@
     .landing-page__img {
         display: none
     }
-    .events :is(.calendar, .banner) {
+    .events .calendar,
+    .events .banner {
         width: 100%;
     }
+    
 
     .events {
 
@@ -128,7 +130,7 @@
 
     .quatation {
         .content {
-            width: 90%;
+            width: 100%;
         }
     }
 
@@ -169,6 +171,20 @@
         }
     }
 
+    .artist .artist-controls-container  {
+
+        .arrow {
+            margin: 0 15px;
+            padding: 9px 18px;
+        }
+        .artist-indicator-container button {
+            padding: 4px;
+            margin: 0 4px;
+        }
+    }
+    .quatation .content__header__arrows .arrow {
+        padding: 9px 18px;
+    }
 }
 
 @media screen and (max-width: 480px) {

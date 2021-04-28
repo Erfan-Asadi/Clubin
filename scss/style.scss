@@ -44,7 +44,7 @@ body {
         }
 
         .nav-anchors {
-            font-size: 1em;
+            font-size: #{"max(1em,1.05vw)"};
             color: #ffffff;
             position: relative;
             transition: all .13s .1s ease;
@@ -94,7 +94,7 @@ body {
         }
 
         .nav-btn {
-            font-size: 1em !important;
+            font-size: #{"max(1em,1.05vw)"};
             padding: .65rem 2.6rem;
             background-image: $gradinet-btn;
             border-radius: 6px;
@@ -187,15 +187,16 @@ body {
             margin-top: 20px;
         }
 
-        & :is(h6, button) {
+        h6,button {
 
             color: #ffffff;
-            font-size: .8em;
+            font-size: #{"max(.85em,1.2vw)"} !important;
         }
 
         h6 {
             margin-bottom: -6px;
             margin-left: 5px;
+            
         }
 
         h3 {
@@ -339,7 +340,7 @@ main {
 
             .header {
                 grid-area: h;
-                font-size: 2em;
+                font-size: #{"max(1.8em,2.4vw)"};
                 font-weight: 700;
             }
 
